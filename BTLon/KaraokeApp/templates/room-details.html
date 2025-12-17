@@ -1,0 +1,73 @@
+{% extends "layout/base.html" %}
+{% block body_class %}page-solid{% endblock %}
+{% block content %}
+<div class="container py-4">
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb" style="font-size: 0.9rem;">
+            <li class="breadcrumb-item"><a href="/room" class="text-decoration-none text-muted">Danh sách phòng</a></li>
+            <li class="breadcrumb-item active text-danger fw-bold">{{ rooms.name }}</li>
+        </ol>
+    </nav>
+
+    <div class="row g-4">
+        <div class="col-lg-7">
+            <img src="{{ rooms.image }}" class="img-fluid rounded-4 shadow-sm w-100"
+                 style="height: 400px; object-fit: cover;">
+
+
+            <div class="mt-4">
+                <h2 class="fw-bold">{{ rooms.name }}</h2>
+                <div class="mb-3">
+                    <span class="text-danger fw-bold">
+                        <i class="bi bi-geo-alt-fill me-1"></i> {{ branches.name }}
+                    </span>
+                    <p class="text-dark mb-0 mt-1">
+                        <strong>Địa chỉ:</strong> {{ branches.address }}, {{ branches.city }}
+                    </p>
+                </div>
+                <p class="text-muted">{{ rooms.description }}</p>
+
+                <hr>
+                <div class="row">
+                    <div class="col-4">
+                        <small class="text-muted d-block">Sức chứa</small>
+                        <strong>{{ rooms.capacity }} người</strong>
+                    </div>
+                    <div class="col-4">
+                        <small class="text-muted d-block">Chi nhánh</small>
+                        <strong>{{ rooms.branch_id }}</strong>
+                    </div>
+                    <div class="col-4">
+                        <small class="text-muted d-block">Trạng thái</small>
+                        <strong class="text-success">{{ rooms.status }}</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="card p-4 border rounded-4 shadow-sm sticky-top" style="top: 20px;">
+                <div class="mb-3">
+                    <span class="text-muted">Giá từ:</span>
+                    <h3 class="text-danger fw-bold mb-0">
+                        {{ "{:,.0f}".format(rooms.hourly_rate) }} VND/giờ
+                    </h3>
+                    <small class="text-muted">* Chưa bao gồm VAT 10%</small>
+                </div>
+
+                <ul class="list-unstyled mb-4 py-3 border-top border-bottom">
+                    <li>✓ Dàn âm thanh chuyên nghiệp</li>
+                    <li>✓ Ánh sáng cảm biến</li>
+                    <li>✓ Tối đa {{ rooms.capacity }} người</li>
+                </ul>
+
+                <a href="/booking/{{ rooms.room_id }}" class="btn btn-danger w-100 py-3 fw-bold rounded-3">
+                    ĐẶT PHÒNG NGAY
+                </a>
+
+                <p class="text-center mt-3 mb-0 small text-muted">Không trùng giờ với phòng khác</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

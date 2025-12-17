@@ -1,0 +1,20 @@
+[
+  {
+  "branch_id": "CN1",
+  "name": "TLKaraoke - Chi nhánh 1",
+  "address": "Nguyễn Bình, Nhà Bè",
+  "city": "Hồ Chí Minh"
+  },
+  {
+  "branch_id": "CN2",
+  "name": "TLKaraoke - Chi nhánh 2",
+  "address": "Võ Văn Tần, Mộ Đức",
+  "city": "Đà Nẵng"
+  },
+  {
+    "branch_id": "CN3",
+    "name": "TLKaraoke - Chi nhánh 3",
+    "address": "120 Yên Lãng, Đống Đa",
+    "city": "Hà Nội"
+  }
+]

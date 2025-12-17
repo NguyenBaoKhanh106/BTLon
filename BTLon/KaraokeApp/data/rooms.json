@@ -1,0 +1,122 @@
+[
+  {
+    "room_id": "P001",
+    "name": "Phòng của Khanh",
+    "branch_id": "CN1",
+    "capacity": "15",
+    "hourly_rate": 100000,
+    "image": "/static/images/room1.jpg",
+    "status": "AVAILABLE",
+    "description": "Phòng lớn, phù hợp cho sự kiện"
+  },
+  {
+    "room_id": "P002",
+    "name": "Phòng của Đức",
+    "branch_id": "CN1",
+    "capacity": "15",
+    "hourly_rate": 150000,
+    "image": "/static/images/room2.jpg",
+    "status": "AVAILABLE",
+    "description": "Phòng lớn, phù hợp cho sự kiện"
+  },
+  {
+    "room_id": "P003",
+    "name": "Phòng của Thắng",
+    "branch_id": "CN2",
+    "capacity": "15",
+    "hourly_rate": 100000,
+    "image": "/static/images/room3.jpg",
+    "status": "AVAILABLE",
+    "description": "Phòng lớn, phù hợp cho sự kiện"
+  },
+  {
+    "room_id": "P004",
+    "name": "Phòng của Vương",
+    "branch_id": "CN3",
+    "capacity": "15",
+    "hourly_rate": 100000,
+    "image": "/static/images/room4.jpg",
+    "status": "AVAILABLE",
+    "description": "Phòng lớn, phù hợp cho sự kiện"
+  },
+  {
+    "room_id": "P005",
+    "name": "Phòng VIP 01",
+    "branch_id": "CN3",
+    "capacity": "15",
+    "hourly_rate": 100000,
+    "image": "/static/images/room5.jpg",
+    "status": "AVAILABLE",
+    "description": "Phòng lớn, phù hợp cho sự kiện"
+  },
+  {
+    "room_id": "P006",
+    "name": "Phòng anh Độ",
+    "branch_id": "CN3",
+    "capacity": "36",
+    "hourly_rate": 363636,
+    "image": "https://i.ytimg.com/vi/lZCjrIJDIqw/maxresdefault.jpg",
+    "status": "AVAILABLE",
+    "description": "Phòng lớn, phù hợp cho sự kiện"
+  },
+  {
+        "room_id": "P007",
+        "name": "Phòng của Minh",
+        "branch_id": "CN1",
+        "capacity": "10",
+        "hourly_rate": 120000,
+        "image": "/static/images/room1.jpg",
+        "status": "AVAILABLE",
+        "description": "Phòng ấm cúng cho nhóm nhỏ"
+    },
+    {
+        "room_id": "P008",
+        "name": "Phòng của Hoàng",
+        "branch_id": "CN2",
+        "capacity": "20",
+        "hourly_rate": 180000,
+        "image": "/static/images/room2.jpg",
+        "status": "AVAILABLE",
+        "description": "Phòng siêu rộng, âm thanh vòm"
+    },
+    {
+        "room_id": "P009",
+        "name": "Phòng của Tuấn",
+        "branch_id": "CN3",
+        "capacity": "12",
+        "hourly_rate": 110000,
+        "image": "/static/images/room3.jpg",
+        "status": "AVAILABLE",
+        "description": "Thiết kế hiện đại, đèn laser"
+    },
+    {
+        "room_id": "P010",
+        "name": "Phòng của Lan",
+        "branch_id": "CN1",
+        "capacity": "15",
+        "hourly_rate": 130000,
+        "image": "/static/images/room4.jpg",
+        "status": "AVAILABLE",
+        "description": "Không gian sang trọng, lịch sự"
+    },
+    {
+        "room_id": "P011",
+        "name": "Phòng của Hùng",
+        "branch_id": "CN2",
+        "capacity": "30",
+        "hourly_rate": 250000,
+        "image": "/static/images/room5.jpg",
+        "status": "AVAILABLE",
+        "description": "Phòng hội trường, sân khấu lớn"
+    },
+    {
+        "room_id": "P012",
+        "name": "Phòng của Vy",
+        "branch_id": "CN3",
+        "capacity": "8",
+        "hourly_rate": 90000,
+        "image": "/static/images/room6.jpg",
+        "status": "AVAILABLE",
+        "description": "Giá sinh viên, cực kỳ thoải mái"
+    }
+]

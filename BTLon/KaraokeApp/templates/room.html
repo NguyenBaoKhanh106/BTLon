@@ -1,0 +1,85 @@
+{% extends "layout/base.html" %}
+
+{% block body_class %}page-solid{% endblock %}
+{% block content %}
+
+<div class="container py-5">
+    <div class="d-flex gap-2 mb-5 flex-wrap justify-content-start">
+        <button class="btn-tab active" onclick="filterRooms('all')">Tất cả</button>
+        {% for branch in branches %}
+            <button class="btn-tab" onclick="filterRooms('{{ branch.branch_id }}')">
+                {{ branch.city }}
+            </button>
+        {% endfor %}
+    </div>
+
+    <div class="row g-4" id="roomGrid">
+        {% for room in rooms %}
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 room-item" data-branch="{{ room.branch_id }}">
+            <div class="card h-100 room-card border-0 shadow-sm">
+                <div class="position-relative">
+                    <img src="{{ room.image }}" class="card-img-top" alt="{{ room.name }}">
+                    <span class="badge-branch">{{ room.branch_id }}</span>
+                </div>
+
+                <div class="card-body">
+                    <h5 class="card-title fw-bold mb-3">{{ room.name }}</h5>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="text-muted small">👤 {{ room.capacity }} người</span>
+                        <span class="badge ms-auto {{ 'bg-success' if room.status == 'AVAILABLE' else 'bg-secondary' }}">
+                            {{ room.status }}
+                        </span>
+                    </div>
+
+                    <div class="price-box mt-auto">
+                        <span class="price-text">{{ "{:,.0f}".format(room.hourly_rate) }} VND</span>
+                        <small class="text-muted">/ giờ</small>
+                    </div>
+
+                    <a href="/room/{{room.room_id}}" class="btn btn-outline-danger w-100 mt-3">
+                        Xem chi tiết
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{%if pages>1%}
+<div class="d-flex justify-content-center mt-4">
+    <ul class="pagination mt-3">
+        {%for i in range(1,pages+1)%}
+        <li class="page-item {{ 'active' if i == current_page else '' }}">
+            <a class="page-link" href="/room?page={{i}}">{{i}}</a>
+        </li>
+    {%endfor%}
+</ul>
+</div>
+{%endif%}
+
+<script>
+    function filterRooms(branchId) {
+    const buttons = document.querySelectorAll('.btn-tab');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active');
+    }
+
+    const rooms = document.querySelectorAll('.room-item');
+
+    rooms.forEach(room => {
+        const itemBranch = room.getAttribute('data-branch');
+
+        if (branchId === 'all' || itemBranch === branchId) {
+            room.classList.remove('d-none');
+        } else {
+            room.classList.add('d-none');
+        }
+    });
+}
+</script>
+
+{% endblock %}
